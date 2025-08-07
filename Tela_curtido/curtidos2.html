@@ -9,7 +9,9 @@
 <body theme = "light">
     <header>
         <div id="parte1">
-            <img src="../imagem/logo.png" height="50" width="180">
+            <a href="../Tela_inicio/inicio.html">
+                <img src="../imagem/logo.png" height="50" width="180">
+            </a>
             <div id="icones">
                 <input id="pesquisar" type="text" placeholder="Pesquisar">
                 <button class="botaotype especial">
@@ -141,22 +143,21 @@
     </main>
 
     <script>
-
-        const dark = document.getElementById('dark')
-        dark.addEventListener('click', function(){
-            document.body.setAttribute('theme', 'dark')
-        })
-
-        const light = document.getElementById('light')
-        light.addEventListener('click', function(){
-            document.body.setAttribute('theme', 'light')
-        })
-
-        const baixa = document.getElementById('baixa')
-        baixa.addEventListener('click', function(){
-            document.body.setAttribute('theme', 'baixa')
-        })
-
+        // Aplica o tema salvo ao carregar a página
+        const temaSalvo = localStorage.getItem('tema');
+        if (temaSalvo) {
+            document.body.setAttribute('theme', temaSalvo);
+        }
+    
+        // Função para mudar e salvar o tema
+        function aplicarTema(tema) {
+            document.body.setAttribute('theme', tema);
+            localStorage.setItem('tema', tema);
+        }
+    
+        // Eventos dos botões
+        document.getElementById('dark').addEventListener('click', () => aplicarTema('dark'));
+        document.getElementById('light').addEventListener('click', () => aplicarTema('light'));
+        document.getElementById('baixa').addEventListener('click', () => aplicarTema('baixa'));
     </script>
-</body>
 </html>

@@ -147,12 +147,10 @@ header{
 }
 #menutenis{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 10px;
-    gap: 70px;
-    padding-top: 20px;
-    color: var(--cor-menu-nav-texto);
+    justify-content: space-around;
+    margin-top: 10px;
+    background-color: var(--cor-do-nav);
+    color: var(--cor-dos-navs);
 } 
 #menutenis p{
     color: var(--cor-texto-menutenis);
@@ -226,4 +224,8 @@ input::placeholder{
 }
 .titulo{
     color: var(--cor-nomes-form);
+}
+a{
+    text-decoration: none;
+    color: #000;
 }

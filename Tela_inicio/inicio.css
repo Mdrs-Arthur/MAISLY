@@ -199,7 +199,6 @@ body{
     flex: 1;
     width: 170px;
     height: 180px;
-    background-color: rgb(205,205,205);
 }
 #block:hover{
     background-color: rgb(180, 180, 180);

@@ -17,9 +17,10 @@
     --cor-icones-parte1: none;
     --cor-icone-especial: none;
     --cor-texto-menutenis: #000;
-    --cor-valor: #0095D0;
+    --cor-valor: #4400FF;
     --cor-texto-corpo: #000;
     --cor-botao: none;
+    
 }
 [theme='dark'] {
     --cor-fundo-principal: #282626;
@@ -40,7 +41,7 @@
     --cor-icones-parte1: brightness(0) invert(1);
     --cor-icone-especial: none;
     --cor-texto-menutenis: #FFF;
-    --cor-valor: #0095D0;
+    --cor-valor: #4400FF;
     --cor-texto-corpo: #FFF;
     --cor-botao: brightness(0) invert(1);;
 }
@@ -64,7 +65,7 @@
     --cor-icone-especial:brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(6162%) hue-rotate(229deg) brightness(92%) contrast(122%);
     --cor-texto-menutenis: #1D0769;
     --cor-valor: #EAD811;
-    --cor-texto-corpo: #EAD811;
+    --cor-texto-corpo: #fff;
     --cor-botao: brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(6162%) hue-rotate(229deg) brightness(92%) contrast(122%);;
 }
 *{
@@ -219,9 +220,10 @@ margin-right: 5px;
     width: 300px;  
 }
 #central_1{
-    background-color: #fff;
+    background-color: var(--cor-da-div-corpo);
     padding: 20px;
     border-radius: 15px;
+    color: var(--cor-texto-corpo);
 }
 .imagensdecima{
     position: relative;
@@ -252,15 +254,16 @@ margin-right: 5px;
     
 }
 #central_2{
-    background-color: #fff;
+    background-color: var(--cor-da-div-corpo);
     padding: 20px;
     border-radius: 15px;
+    color: var(--cor-texto-corpo);
 }
 #central_3{
-    background-color: #fff;
+    background-color: var(--cor-da-div-corpo);
     padding: 20px;
     border-radius: 15px;
-    
+    color: var(--cor-texto-corpo);
 }
 #ngc_la_1{
     display: flex;
@@ -278,20 +281,20 @@ margin-right: 5px;
     margin-bottom:10px ;
 }
 .um{
-     color: blue;
+     color: var(--cor-valor);
 }
 .dois{
-    color: blue;
+    color: var(--cor-valor);
 }
 .tres{
-    color: blue;
+    color: var(--cor-valor);
 }
 .pa_0{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #ffffff;
     gap: 7px;
+    color: #000;
 }
 .pa_0 p{
     padding: 10px;
