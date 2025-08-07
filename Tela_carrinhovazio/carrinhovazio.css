@@ -271,3 +271,7 @@ color: var(--cor-fundo-principal);
 #botao:hover img {
   filter: brightness(0) invert(1);
 }
+a {
+    text-decoration: none;
+    color: black;
+}
