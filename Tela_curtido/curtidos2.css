@@ -273,3 +273,7 @@ color: #000000;
 #botcompra{
     padding: 0px 100px;
 } 
+a {
+    text-decoration: none;
+    color: black;
+}
