@@ -382,7 +382,7 @@ padding-left: 100px;
     font-size: 20px;
 }
 .addproduto:hover{
-    background-color: #474747;
+    background-color: #1e1e1e;
     color: #FFF;
 }
 .addproduto p{
@@ -400,4 +400,3 @@ padding-left: 100px;
     padding-right: 40px;
 }
 }
-
