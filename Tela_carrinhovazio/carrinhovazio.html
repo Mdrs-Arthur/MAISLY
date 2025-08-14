@@ -15,10 +15,10 @@
             <div id="icones">
                 <input id="pesquisar" type="text" placeholder="Pesquisar">
                 <button class="botaotype especial">
-                    <img src="../imagem/coracao.png">
+                    <img src="../imagem/coracao.png" onclick="abrirCurtido()">
                 </button>
                 <button class="botaotype">
-                    <img src="../imagem/carrinho.png">
+                    <img src="../imagem/carrinho.png" onclick="abrirCarrinho()">
                 </button>
                 <button class="botaotype">
                     <img src="../imagem/pessoalogin.png">
@@ -102,22 +102,30 @@
         </nav>
     </div>
     <script>
-        // Aplica o tema salvo ao carregar a página
-        const temaSalvo = localStorage.getItem('tema');
+       // Aplica o tema
+       const temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             document.body.setAttribute('theme', temaSalvo);
         }
     
-        // Função para mudar e salvar o tema
         function aplicarTema(tema) {
             document.body.setAttribute('theme', tema);
             localStorage.setItem('tema', tema);
         }
-    
-        // Eventos dos botões
+
         document.getElementById('dark').addEventListener('click', () => aplicarTema('dark'));
         document.getElementById('light').addEventListener('click', () => aplicarTema('light'));
         document.getElementById('baixa').addEventListener('click', () => aplicarTema('baixa'));
+
+        // Função para abrir curtidos (cheio e vazio)
+        function abrirCurtido() {
+            let curtido = JSON.parse(localStorage.getItem('curtido')) || [];
+            if (curtido.length > 0) {
+                window.location.href = '../Tela_curtido/curtidos2.html';
+            } else {
+                window.location.href = '../Tela_curtidovazio/curtidovazio.html';
+            }
+        }
     </script>
 </body>
 </html>

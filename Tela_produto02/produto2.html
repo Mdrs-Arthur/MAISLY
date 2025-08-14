@@ -15,10 +15,10 @@
             <div id="icones">
                 <input id="pesquisar" type="text" placeholder="Pesquisar" >
 
-                <button class="botaotype">
+                <button class="botaotype" onclick="abrirCurtido()">
                     <img src="../imagem/coracao.png"  >
                 </button>
-                <button  class="botaotype especial">
+                <button  class="botaotype especial" onclick="abrirCarrinho()">
                     <img src="../imagem/carrinho.png" class="botao_especial">
                 </button>
                 <button  class="botaotype">
@@ -90,14 +90,27 @@
         </a>
     </nav>
 
+    <ul id="lista-curtido"></ul>
+
+    <script>
+    const curtido = JSON.parse(localStorage.getItem('curtido')) || [];
+    const lista = document.getElementById('lista-curtido');
+
+    curtido.forEach(produto => {
+        const item = document.createElement('li');
+        item.textContent = `${produto.nome} - R$${produto.preco}`;
+        lista.appendChild(item);
+    });
+
+    </script>
 
     <div id = central_p>
         <div id = central_1>
             <div class="imagensdecima">
                 <img src="../imagem/tenis_wemylly_4.png" alt="" class="tenis">  
                 <div class="icones-valor">
-                    <button> <img src="../imagem/carrinho.png" alt=""></button>
-                    <button> <img src="../imagem/coracao.png" alt=""></button>
+                    <button onclick="adicionarAoCarrinho('Tênis Nike Air Max Alpha Trainer 6', 522,49)"> <img src="../imagem/carrinho.png" alt=""></button>
+                    <button onclick="adicionarAoCurtido('Tênis Nike Air Max Alpha Trainer 6', 522,49)"> <img src="../imagem/coracao.png" alt=""></button>
                 </div>
             </div>
             <p>Tênis Nike Air Max Alpha Trainer 6 </p>
@@ -125,8 +138,8 @@
             <div class="imagensdecima">
                 <img src="../imagem/tenis_wemylly_5.png" alt="" class="tenis">  
                 <div class="icones-valor">
-                    <button> <img src="../imagem/carrinho.png" alt=""></button>
-                    <button> <img src="../imagem/coracao.png" alt=""></button>
+                    <button onclick="adicionarAoCarrinho('Tênis Nike SB Force 58 Masculino', 360,99)"> <img src="../imagem/carrinho.png" alt=""></button>
+                    <button onclick="adicionarAoCurtido('Tênis Nike SB Force 58 Masculino', 360,99)"> <img src="../imagem/coracao.png" alt=""></button>
                 </div>
             </div>
             <p>Tênis Nike SB Force 58 Masculino </p>
@@ -154,8 +167,8 @@
             <div class="imagensdecima">
                 <img src="../imagem/tenis_wemylly_6.png" alt="" class="tenis">  
                 <div class="icones-valor">
-                    <button> <img src="../imagem/carrinho.png" alt=""></button>
-                    <button> <img src="../imagem/coracao.png" alt=""></button>
+                    <button onclick="adicionarAoCarrinho('Tênis Nike Air Max Impact 4', 223,24)"> <img src="../imagem/carrinho.png" alt=""></button>
+                    <button onclick="adicionarAoCurtido('Tênis Nike Air Max Impact 4', 223,24)"> <img src="../imagem/coracao.png" alt=""></button>
                 </div>
             </div>
             <p>Tênis Nike Air Max Impact 4 </p>
@@ -181,22 +194,81 @@
 
     </div>
     <script>
-        // Aplica o tema salvo ao carregar a página
+        // Aplica o tema
         const temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             document.body.setAttribute('theme', temaSalvo);
         }
     
-        // Função para mudar e salvar o tema
         function aplicarTema(tema) {
             document.body.setAttribute('theme', tema);
             localStorage.setItem('tema', tema);
         }
-    
-        // Eventos dos botões
+
         document.getElementById('dark').addEventListener('click', () => aplicarTema('dark'));
         document.getElementById('light').addEventListener('click', () => aplicarTema('light'));
         document.getElementById('baixa').addEventListener('click', () => aplicarTema('baixa'));
+
+        // função do carrinho
+        function adicionarAoCarrinho(nome, preco) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+            let produto = {
+                nome: nome,
+                preco: preco,
+                quantidade: 1
+            };
+
+            let existente = carrinho.find(item => item.nome === nome);
+
+            if (existente) {
+                existente.quantidade += 1; 
+            } else {
+                carrinho.push(produto); 
+            }
+
+            
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            alert(`"${nome}" adicionado ao carrinho!`);
+        }
+
+         // Função dos curtidos
+         function adicionarAoCurtido(nome, preco) {
+            let curtido = JSON.parse(localStorage.getItem('curtido')) || [];
+
+            const existente = curtido.find(item => item.nome === nome);
+            if (existente) {
+                alert('Produto já curtido!');
+                return;
+            }
+
+            const produto = { nome, preco };
+            curtido.push(produto);
+
+            localStorage.setItem('curtido', JSON.stringify(curtido));
+            alert(`${nome} adicionado aos curtidos!`);
+        }
+
+        //Função para abrir carrinho (cheio ou vazio)
+        function abrirCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            if (carrinho.length > 0) {
+                window.location.href = '../Tela_carrinho/carrinho.html';
+            } else {
+                window.location.href = '../Tela_carrinhovazio/carrinhovazio.html';
+            }
+        }
+
+        // Função para abrir curtidos (cheio e vazio)
+        function abrirCurtido() {
+            let curtido = JSON.parse(localStorage.getItem('curtido')) || [];
+            if (curtido.length > 0) {
+                window.location.href = '../Tela_curtido/curtidos2.html';
+            } else {
+                window.location.href = '../Tela_curtidovazio/curtidovazio.html';
+            }
+        }
     </script>
 </body>
 </html>
