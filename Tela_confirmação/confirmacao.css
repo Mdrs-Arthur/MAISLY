@@ -242,13 +242,14 @@ input::placeholder {
   justify-content: center;
   margin-bottom: 40px;
   color: black;
+  border-bottom: 1px solid black;
+  font-size: 40px;
+  width: 50%;
 }
 .titulo p{
   display: flex;
   justify-content: center;
-  width: 50%;
-  font-size: 40px;
-  border-bottom: 1px solid black;
+  
 }
 .nomes{
   display: flex;
@@ -309,40 +310,13 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
 }
-/* .imagem img{
-  width: 250px;
-  height: 250px;
-} */
 .cinza{
   background-color: #BCB9B9;
 }
-    .retangulo1, .retangulo2 {
-      position: absolute;
-      background-color: #c4c4c4;
-      width: 120px;
-      height: 270px;
-      z-index: 0;
-    }
-
-    .retangulo1 {
-      transform: rotate(-10deg);
-      left: -20px;
-    }
-
-    .retangulo2 {
-      transform: rotate(-2deg);
-      left: 0px;
-    }
-
-    .imagem-tenis {
-      position: absolute;
-      top: 35px;
-      left: 10px;
-      width: 100%;
-      z-index: 2;
-    }
-
-    .imagem-tenis img {
+.imagem-tenis{
+  width: 80%;
+}
+.imagem-tenis img {
       width: 100%;
       height: auto;
     }
@@ -350,3 +324,75 @@ input::placeholder {
       text-decoration: none;
       color: black;
   }
+@media (min-width: 1024px){
+    #confirmacao{
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+    }
+}
+@media (min-width: 601px) and (max-width: 1023px){
+    #confirmacao{
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+    }
+}
+@media (max-width: 600px){
+    #confirmacao{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 70%;
+        height: 80vh;
+    }
+    #pesquisar{
+        display: none;
+    }
+    nav{
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 5px;
+        padding-top: 0;
+    }
+    .p{
+        border-right: 2px solid var(--cor-das-linhas);
+        padding: 0;
+        padding-right: 5px;
+        color: var(--cor-das-linhas);
+        display: flex;
+    }
+    #ajuda{
+        color: var(--cor-das-linhas);
+        display: flex;
+    } 
+    #parte2{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .titulo{
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid black;
+      margin-bottom: 20px;
+      color: black;
+      font-size: 30px;
+    }
+    .texto{
+      padding: 0;
+      width: 100%;
+    }
+    #compras{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .partebaixa{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+}
