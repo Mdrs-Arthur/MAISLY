@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAISLY</title>
+    <title>Document</title>
     <link rel="stylesheet" href="carrinhovazio.css">
 </head>
 <body theme = light>
@@ -14,22 +14,16 @@
             </a>
             <div id="icones">
                 <input id="pesquisar" type="text" placeholder="Pesquisar">
-                
-                <button class="botaotype" onclick="abrirCurtido()">
-                    <img src="../imagem/coracao.png">
-                </button>
-
                 <button class="botaotype especial">
+                    <img src="../imagem/coracao.png" onclick="abrirCurtido()">
+                </button>
+                <button class="botaotype">
                     <img src="../imagem/carrinho.png" onclick="abrirCarrinho()">
                 </button>
-
-                <a href="../Tela_perfil/perfil.html"></a>
                 <button class="botaotype">
                     <img src="../imagem/pessoalogin.png">
                 </button>
             </div>
-        </a>
-
         </div>
         <div id="parte2"> 
         <div class="menu-temas">
@@ -95,99 +89,21 @@
             </div>
         </a>
     </nav>
-    <section> 
-        <div class="container">
-            <div class="corpo1">
-                <div class="nav">
-                    <p>Seu carrinho</p>
-                </div>
-                <div class="corpo">
-                    <div class="produto">
-                        <img src="../imagem/teniscarrinhocheio.png" alt="imagem indisponível">
-                    </div>
-                    <div class="infoproduto">
-                        <div class="geral">
-                            <p>Tênis de Vôlei Grafite Original |</p>
-                            <p>Respirável e Antiderrapante ( Original )</p>
-                            <br>
-                            <p>Cor:Branco,azul e laranja</p>
-                            <p>Tamanho: 37</p>
-                        </div>
-                        <div class="especifico">
-                            <div class="quantidade">
-                                <p class="qntd">Quantidade</p>
-                                <div class="quantidade_num">
-                                    <img src="../imagem/setinha.png" alt="">
-                                    <div class="num">
-                                        <p>1</p>
-                                    </div>
-                                    <img src="../imagem/setinhadireita.png" alt="">
-                                </div>
-                            </div>
-                            <div class="valor">
-                                <p>____________</p>
-                                <div class="valor_num">
-                                    <p>R$ 277,00</p>
-                                    <div class="icones-valor">
-                                        <img src="../imagem/coraçãointeiro.png" alt="">
-                                        <img src="../imagem/lixinho.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="botao">
-                <img src="../imagem/seta.png" alt="">
-            </div>
-            <div class="resumo1">
-                <div class="nav">
-                    <p>Resumo do pedido</p>
-                </div>
-                <div class="resumoebotao">
-                    <div class="resumo">
-                        <div class="produtos">
-                            <img src="../imagem/teniscarrinho_comfundo.png" alt="">
-                            <div class="quadradinho">
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Preço de varejo:</p>
-                            <p class="preco">R$ 277,00</p>
-                        </div>
-                        <div class="info2">
-                            <p>Subtotal   (1 item )</p>
-                        </div>
-                        <div class="info3">
-                            <p>______________</p>
-                            <div class="info4">
-                                <p>Valor total:</p>
-                                <p class="preco">R$ 277,00</p>
-                            </div>
+    <div id="tudo">
+        <nav id="container">
+            <h1 id="carrinho">Seu carrinho está vazio</h1>
+            <img src="../imagem/carrinhovazio.png" alt="" height="190" width="190">
 
-                        </div>
-                        <div>
-                            <button class="finalizar">
-                                Finalizar compra
-                            </button>
-                        </div>
-                        </div>
-                        <div class="button">
-                            <button class="addproduto">
-                                    <img src="../imagem/adicionarcarrinho.png" alt="" class="icn">
-                                    <p>Adicionar produto</p>
-                                </button>
-                            </div>
-                    </div>
+                <button id="botao">
+                     <img src="../imagem/adicionarcarrinho.png" id="iconestl" >
+                    Adicionar Produto
+                </button>
 
-                </div>
-                </div>
-        </div>
-    </section>
+        </nav>
+    </div>
     <script>
-        // Aplica o tema
-        const temaSalvo = localStorage.getItem('tema');
+       // Aplica o tema
+       const temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             document.body.setAttribute('theme', temaSalvo);
         }

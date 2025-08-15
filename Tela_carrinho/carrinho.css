@@ -69,9 +69,11 @@
 }
 *{
     margin: 0;
+ 
 }
 header{
     background-color: var(--cor-do-header);
+    width: 100%;
 }
 #parte1{
     display: flex;
@@ -106,9 +108,12 @@ input::placeholder{
     padding-right: 20px;
 }
 
+
 body{
     background-color: var(--cor-fundo-principal);
+    width: 100%;
 }
+
 
 #iconestl{
 height: 20px;
@@ -123,6 +128,7 @@ margin-right: 5px;
     background-color: var(--cor-icone-nao-selecionado);
     width: 45px;
     height: 45px;
+
 
 }
 .botaotype img{
@@ -148,6 +154,7 @@ margin-right: 5px;
     background-color: var(--cor-hover-icones);
 }
 
+
 #navtenis{
     gap: 10px;
     flex-direction: column;
@@ -170,6 +177,7 @@ margin-right: 5px;
     gap: 70px;
     padding-top: 20px;
     color: var(--cor-menu-nav-texto);
+    width: 100%;
 }
 #menutenis p{
     color: var(--cor-texto-menutenis);
@@ -180,7 +188,7 @@ margin-right: 5px;
     align-items: center;
     width: 170px;
     height: 180px;
-    
+   
 }
 #block:hover{
     background-color:  rgb(180, 180, 180);
@@ -208,15 +216,17 @@ margin-right: 5px;
     cursor: pointer;
 }
 .temas p {
-    cursor: pointer; 
+    cursor: pointer;
 }
 .p-a{
-   cursor: pointer; 
+   cursor: pointer;
 }
 .logo{
     cursor: pointer;
 }
 section{
+
+
 padding-left: 100px;
 }
 .nav{
@@ -239,8 +249,10 @@ padding-left: 100px;
     padding-left: 50px;
     padding-right: 50px;
 
+
 }
 .infoproduto{
+
 
     font-size: 35px;
     padding-left: 30px ;;
@@ -292,6 +304,7 @@ padding-left: 100px;
 .icones-valor img{
     width: 40px;
 
+
 }
 .valor{
     filter: var(--cor-icones);
@@ -302,6 +315,9 @@ padding-left: 100px;
 }
 .container{
     display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 .botao{
     display: flex;
@@ -381,6 +397,7 @@ padding-left: 100px;
     width: 360px;
     height: 50px;
     font-size: 20px;
+    margin-top: 20px;
 }
 .addproduto:hover{
     background-color: #1e1e1e;
@@ -397,10 +414,136 @@ padding-left: 100px;
 .button{
     display: flex;
     align-items: center;
-    justify-content: end;
+
+
     padding-right: 40px;
 }
 a {
     text-decoration: none;
     color: black;
+}
+@media (max-width:1890px){
+  .container{
+    display: block;
+  }
+  .botao img{
+    display: none;
+  }
+  nav{
+        flex-wrap: wrap;
+    }
+
+
+}
+@media (max-width:1310px){
+  .corpo{
+    display: block;
+    width: 600px;
+    height: 1000px;
+  }
+  section{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px){
+    section{
+        padding: 0;
+    }
+    #pesquisar{
+        display: none;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    .p{
+        border-right: 2px solid var(--cor-das-linhas);
+        padding: 0;
+        padding-right: 5px;
+        color: var(--cor-das-linhas);
+        display: flex;
+    }
+    #ajuda{
+        color: var(--cor-das-linhas);
+        display: flex;
+    }
+    #parte2{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    #pesquisar{
+        display: none;
+    }
+    nav{
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 5px;
+        padding-top: 0;
+    }
+    .p{
+        border-right: 2px solid var(--cor-das-linhas);
+        padding: 0;
+        padding-right: 5px;
+        color: var(--cor-das-linhas);
+        display: flex;
+    }
+    #ajuda{
+        color: var(--cor-das-linhas);
+        display: flex;
+    } 
+    #parte2{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
+    section{
+        padding: 0px;
+    }
+    .corpo img{
+        width: 300px;
+        height: 300px;
+
+    }
+    .corpo{
+        display: block;
+        font-size: smaller;
+        height: 800px;
+        width: 340px;
+        padding-left: 25px;
+    }
+    .icones-valor img{
+        width: 20px;
+        height: 20px;
+
+    }
+    .valor_num, .valor, .especifico, .geral{
+
+        width: 350px;
+    }
+    .valor, .especifico, .geral{
+        font-size: 22px;
+    }
+    .especifico img{
+        width: 30px;
+        height: 30px;
+    }
+    .infoproduto{
+        margin-top: 100px;
+        padding-left: 0;
+    }
+    .container{
+        padding-left: 30px;
+        display: block ;
+    }
+    .botao{
+        display: none;
+    }
+    .resumo1{
+        padding-left: 10px;
+    }
 }

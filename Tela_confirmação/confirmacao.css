@@ -285,7 +285,6 @@ input::placeholder {
   flex-direction: column;
   gap: 10px;
   color: #000;
-  flex: 1;
 }
 .metodo h3{
   font-size: 25px;
@@ -306,7 +305,7 @@ input::placeholder {
 .botao{
   display: flex;
   justify-content: end;
-  flex: 2;
+  flex: 2; 
   flex-direction: column;
   align-items: center;
 }
@@ -328,7 +327,13 @@ input::placeholder {
     #confirmacao{
         display: flex;
         justify-content: center;
-        height: 70vh;
+        width: 90%;
+    }
+    nav{
+        gap: 100px;
+        flex-wrap: wrap;
+        padding: 5px;
+        padding-top: 0;
     }
 }
 @media (min-width: 601px) and (max-width: 1023px){
@@ -336,16 +341,23 @@ input::placeholder {
         display: flex;
         justify-content: center;
         height: 50vh;
+        width: 90%;
+    }
+    nav{
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 5px;
+        padding-top: 0;
     }
 }
 @media (max-width: 600px){
     #confirmacao{
         display: flex;
         justify-content: start;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         width: 70%;
-        height: 80vh;
+        height: 85vh;
     }
     #pesquisar{
         display: none;
@@ -391,8 +403,30 @@ input::placeholder {
     }
     .partebaixa{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
     }
-
-}
+    .metodo{
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .metodo h3{
+      display: flex;
+      font-size: 20px;
+      flex: 0;
+      width: 100%;
+    }
+    .pagamento.cartao, .pagamento.pix{
+      width: 90%;
+    }
+    .botao{
+      display: flex;
+      margin-top: 20px;
+      width: 100%;
+    }
+    #fazer-pedido {
+        width: 60%;
+        padding: 10px 15px;
+    }
+  }
