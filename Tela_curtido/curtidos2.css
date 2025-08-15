@@ -209,9 +209,6 @@ margin-right: 5px;
 
 
 
-*{
-    margin: 0;
-}
 
 
 #tenis{
@@ -276,4 +273,143 @@ color: #000000;
 a {
     text-decoration: none;
     color: black;
+}
+#textall{
+    white-space: nowrap;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #parte1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #pesquisar {
+        padding: 5px 60px 5px 15px;
+        margin: 0;
+    }
+
+    #icones {
+        gap: 10px;
+    }
+
+    #menutenis {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    #container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    #tudo{
+         flex-direction: column;
+        width: 714px;
+        height: 300px;
+    }
+    #botcompra{
+            display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: -30px;
+    }
+
+
+}
+
+
+@media (max-width: 767px) {
+    
+
+
+    header {
+        padding: 10px;
+    }
+
+    #parte1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #pesquisar {
+        display: block;
+        padding: 5px 40px 5px 15px;
+        margin: 0;
+        width: 90%;
+    }
+
+    #icones {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #parte2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        height: auto;
+    }
+
+    #menutenis {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #block {
+        width: 120px;
+        height: auto;
+    }
+
+    #block img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #container {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+    }
+    #menucompra{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+    #botcompra{
+    height: 30%;
+    margin-top: -20px;
+    }
+
+    #botao {
+        
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
+    #tudo{
+        flex-direction: column;
+        width: 390px;
+        height: 500px;
+    }
+    #tenisimg img{
+        width: 200px;
+        height: 200px;
+        
+    }
+    #textall{
+        font-size:90%;
+        margin-top: -20px;
+        
+    }
+    #itens{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
