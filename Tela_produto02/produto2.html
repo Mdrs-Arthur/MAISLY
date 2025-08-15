@@ -90,20 +90,6 @@
         </a>
     </nav>
 
-    <ul id="lista-curtido"></ul>
-
-    <script>
-    const curtido = JSON.parse(localStorage.getItem('curtido')) || [];
-    const lista = document.getElementById('lista-curtido');
-
-    curtido.forEach(produto => {
-        const item = document.createElement('li');
-        item.textContent = `${produto.nome} - R$${produto.preco}`;
-        lista.appendChild(item);
-    });
-
-    </script>
-
     <div id = central_p>
         <div id = central_1>
             <div class="imagensdecima">

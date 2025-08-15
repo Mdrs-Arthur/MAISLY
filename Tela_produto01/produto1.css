@@ -320,3 +320,22 @@ a {
     text-decoration: none;
     color: black;
 }
+@media(max-width:450px) {
+    #central_p { 
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        
+    }
+    #central_1{
+        width: 47%;
+    }
+    #central_2{
+       width: 47%;
+    }
+    #central_3{
+       width: 47%;
+    }
+    
+}
+
