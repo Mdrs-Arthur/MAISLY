@@ -20,9 +20,11 @@
                 <button  class="botaotype" onclick="abrirCarrinho()">
                     <img class="img" src="../imagem/carrinho.png" >
                 </button>
-                <button  class="botaotype especial">
-                    <img class="img" src="../imagem/pessoalogin.png" >
-                </button>
+                <a href="../Tela_perfil/perfil.html">
+                    <button class="botaotype especial">
+                        <img src="../imagem/pessoalogin.png">
+                    </button>
+                </a>
             </div>
         </div>
         <div id="parte2">
@@ -51,12 +53,12 @@
     <section>
         <div id="corpo">
             <div id="form">
-                <p class="titulo">Meu perfil</p>
-                <input class="caixa2" type="text" placeholder="Nome     *************" required>
-                <input class="caixa2" type="text" placeholder="Sobrenome     *********" required>
-                <input class="caixa2" type="text" placeholder="E-Mail     *************" required>
-                <input class="caixa2" type="text" placeholder="Senha     *************" required>
-                <button class="botao">Sair</button>
+                <p class="perfil">Meu perfil</p>
+                <p class="caixa2">Nome     *************</p>
+                <p class="caixa2">Sobrenome     *********</p>
+                <p class="caixa2">E-Mail     *************</p>
+                <p class="caixa2">Senha     *************</p>
+                <button class="botao" onclick="voltar()">Sair</button>
             </div>
         </div>
     </section>
@@ -96,6 +98,11 @@
             }
         }
 
+        // Função para voltar a tela anterior
+        function voltar() {
+            window.history.back()
+        }
+    
     </script>
 </body>
 </html>
