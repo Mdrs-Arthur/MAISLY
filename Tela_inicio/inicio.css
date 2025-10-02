@@ -163,6 +163,20 @@ body{
 .botaotype.especial{
      background-color: var(--cor-hover-icones);
 }
+a{
+    text-decoration: none ;
+}
+.temas {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-menu-temas);
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    border-radius: 10px;
+}
+.menu-temas:hover .temas {
+    display: block;
+}
 #navtenis{
     display: flex;
     align-items: center;
@@ -181,7 +195,7 @@ body{
     max-width: 100%;
     height: auto;
 }
-#menutenis{
+.sidebar_normal{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -257,26 +271,54 @@ footer {
     white-space: nowrap; 
     color: var(--cor-nome-off);
 }
+/* sidebar */
+.sidebar-icon{
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: none;
+    padding-right: 20px;
+    border-right: 2px solid #000;
+}
+.sidebar{
+    padding-top: 50px;
+    height: 1000vh;
+    width: 0; /* começa fechado */
+    position: fixed;
+    top: 0; /*mudei isso*/
+    left: 0; /* se quiser do lado direito, troque para right: 0 */
+    z-index: 1000;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    gap: 10px;
+    overflow-x: hidden; /* esconde o conteúdo quando fechado */
+    transition: width 0.3s ease; /* animação suave */
+    display: flex;
+    margin: 0;
+}
+.sidebar.open{
+    width: 200px;/* e mudei isso (tava 250)*/
+}
+.sidebar a{
+    cursor: pointer;
+    padding: 10px 0px 10px 30px;
+    border-radius: 15px;
+}
+.sidebar a:hover{
+    margin: 10px;
+    background-color: #CDCDCD;
+}
 
 /* Responsivo */
-@media (max-width: 450px) {
-    #parte1 {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-    }
+@media (max-width: 1023px) {
     #pesquisar {
-        padding: 5px 60px 5px 10px;
-        margin-right: 0;
-        width: 100%;
-        box-sizing: border-box;
+        display: none;
     }
     #parte2 {
-        flex-direction: column;
-        gap: 10px;
-        padding-right: 0;
-        align-items: center;
+        justify-content: start;
     }
     .p {
         border-right: none;
@@ -297,5 +339,38 @@ footer {
     .produto-nome h1 {
         font-size: 30px;
         margin-top: 0;
+    }
+    .sidebar_normal{
+        display: none;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-right: 30px;
+    }
+    #parte2{
+        justify-content: start;
+    }
+    #acesibili{
+        display: none;
+    }
+    #ajuda{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
+    #pesquisar{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .off{
+        margin-top: 15px;
     }
 }

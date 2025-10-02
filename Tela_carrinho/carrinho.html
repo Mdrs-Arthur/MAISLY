@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAISLY</title>
     <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body theme = light>
     <header>
@@ -33,7 +34,11 @@
 
         </div>
         <div id="parte2"> 
-        <div class="menu-temas">
+            <button onclick="openMenu()" class="sidebar-icon">
+                <i id="icon" class="bi bi-list"></i>
+                <span>Menu</span>
+            </button>
+            <div class="menu-temas">
                 <p class="p"> <img src="../imagem/ferramenta.png" id="iconestl"> Temas</p>
                 <div class="temas"> 
                 <p id="light">Light</p>
@@ -41,60 +46,72 @@
                 <p id="baixa">Baixa visão</p>
                 </div>
             </div>
-        <p class="p">  <img src="../imagem/acesibili.png" id="iconestl">Acessibilidade</p>
+        <p class="p"  id="acesibili">  <img src="../imagem/acesibili.png" id="iconestl">Acessibilidade</p>
         <p class="p-a"> <img src="../imagem/ajudasemfundo.png" id="iconestl"> Ajuda </p>
         </div>
     </header>
 
     <nav id="menutenis">
-        <a href="../Tela_produto01/produto1.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis0.jpeg" alt="">
-                <p>Promoções</p>
-            </div>
-        </a>
-        <a href="../Tela_produto02/produto2.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis1.jpeg" alt="">
-                <p>Masculino</p>
-            </div>
-        </a>
-        <a href="../Tela_produto03/produto3.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis2.jpeg" alt="">
-                <p>Feminino</p>
-            </div>
-        </a>
-        <a href="../Tela_produto04/produto4.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis3.jpeg" alt="">
-                <p>Infantil</p>
-            </div>
-        </a>
-        <a href="../Tela_produto05/produto5.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis4.jpeg" alt="">
-                <p>Social</p>
-            </div>
-        </a>
-        <a href="../Tela_produto06/produto6.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis5.jpeg" alt="">
-                <p>Casual</p>
-            </div>
-        </a>
-        <a href="../Tela_produto07/produto7.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis6.jpeg" alt="">
-                <p>Esportivo</p>
-            </div>
-        </a>
-        <a href="../Tela_produto08/produto8.html"id="block">
-            <div id="navtenis">
-                <img src="../imagem/tenis7.jpeg" alt="">
-                <p>Sneaker</p>
-            </div>
-        </a>
+        <div class="menu">
+            <a href="../Tela_produto01/produto1.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis0.jpeg" alt="">
+                    <p>Promoções</p>
+                </div>
+            </a>
+            <a href="../Tela_produto02/produto2.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis1.jpeg" alt="">
+                    <p>Masculino</p>
+                </div>
+            </a>
+            <a href="../Tela_produto03/produto3.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis2.jpeg" alt="">
+                    <p>Feminino</p>
+                </div>
+            </a>
+            <a href="../Tela_produto04/produto4.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis3.jpeg" alt="">
+                    <p>Infantil</p>
+                </div>
+            </a>
+            <a href="../Tela_produto05/produto5.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis4.jpeg" alt="">
+                    <p>Social</p>
+                </div>
+            </a>
+            <a href="../Tela_produto06/produto6.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis5.jpeg" alt="">
+                    <p>Casual</p>
+                </div>
+            </a>
+            <a href="../Tela_produto07/produto7.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis6.jpeg" alt="">
+                    <p>Esportivo</p>
+                </div>
+            </a>
+            <a href="../Tela_produto08/produto8.html"id="block">
+                <div id="navtenis">
+                    <img src="../imagem/tenis7.jpeg" alt="">
+                    <p>Sneaker</p>
+                </div>
+            </a>
+        </div>
+        <div class="sidebar">
+            <a href="../Tela_produto01/produto1.html"><p>Promoções</p></a>
+            <a href="../Tela_produto02/produto2.html"><p>Masculino</p></a>
+            <a href="../Tela_produto03/produto3.html"><p>Feminino</p></a>
+            <a href="../Tela_produto04/produto4.html"><p>Infantil</p></a>
+            <a href="../Tela_produto05/produto5.html"><p>Social</p></a>
+            <a href="../Tela_produto06/produto6.html"><p>Casual</p></a>
+            <a href="../Tela_produto07/produto7.html"><p>Esportivo</p></a>
+            <a href="../Tela_produto08/produto8.html"><p>Sneaker</p></a>
+        </div>
     </nav>
     <section> 
         <div class="container">
@@ -130,8 +147,8 @@
                                 <div class="valor_num">
                                     <p>R$ 277,00</p>
                                     <div class="icones-valor">
-                                        <img src="../imagem/coraçãointeiro.png" alt="">
-                                        <img src="../imagem/lixinho.png" alt="">
+                                        <div class="coracao"><img src="../imagem/coraçãointeiro.png" alt=""></div>
+                                        <div class="lixinho"><img src="../imagem/lixinho.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +185,7 @@
                             </div>
 
                         </div>
-                        <div>
+                        <div class="finalizard">
                             <button class="finalizar">
                                 Finalizar compra
                             </button>
@@ -177,9 +194,9 @@
                         <div class="button">
                             <button class="addproduto">
                                     <img src="../imagem/adicionarcarrinho.png" alt="" class="icn">
-                                    <p>Adicionar produto</p>
-                                </button>
-                            </div>
+                                    Adicionar produto
+                            </button>
+                        </div>
                     </div>
 
                 </div>
@@ -209,6 +226,22 @@
                 window.location.href = '../Tela_curtido/curtidos2.html';
             } else {
                 window.location.href = '../Tela_curtidovazio/curtidovazio.html';
+            }
+        }
+
+        // Função abir sidebar
+        function openMenu() {
+            const menu = document.querySelector(".sidebar");
+            const icon = document.getElementById("icon");
+
+            menu.classList.toggle("open");
+
+            if (menu.classList.contains("open")) {
+                icon.classList.remove("bi-list");
+                icon.classList.add("bi-x-lg");
+            } else {
+                icon.classList.remove("bi-x-lg");
+                icon.classList.add("bi-list");
             }
         }
     </script>

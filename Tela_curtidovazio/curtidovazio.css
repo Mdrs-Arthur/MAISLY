@@ -171,7 +171,7 @@ margin-right: 5px;
     border-radius: 100%;
     color: var(--cor-menu-temas);
 }
-#menutenis{
+.menu{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -259,11 +259,11 @@ margin-right: 5px;
     border-radius: 10px;
     border:  none;
     background-color: var(--cor-botaoo);
-    color: var(--cor-do-nome-pesquisar);
+    color: var(--cor-menu-nav-texto);
 }
 #botao:hover{
 background-color: var(--cor-hover-botao);
-color: var(--cor-fundo-principal);
+color: var(--cor-do-nome-pesquisar);
 
 }
 
@@ -280,17 +280,57 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* sidebar */
+.sidebar-icon{
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: none;
+    padding-right: 20px;
+    border-right: 2px solid #000;
+}
+.sidebar{
+    padding-top: 50px;
+    height: 1000vh;
+    width: 0; /* começa fechado */
+    position: fixed;
+    top: 0; /*mudei isso*/
+    left: 0; /* se quiser do lado direito, troque para right: 0 */
+    z-index: 1000;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    gap: 10px;
+    overflow-x: hidden; /* esconde o conteúdo quando fechado */
+    transition: width 0.3s ease; /* animação suave */
+    display: flex;
+    margin: 0;
+}
+.sidebar.open{
+    width: 200px;/* e mudei isso (tava 250)*/
+}
+.sidebar a{
+    cursor: pointer;
+    padding: 10px 0px 10px 30px;
+    border-radius: 15px;
+}
+.sidebar a:hover{
+    margin: 10px;
+    background-color: #CDCDCD;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     #parte1 {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        justify-content: space-between;
     }
-
+    #parte2{
+        justify-content: start;
+    }
     #pesquisar {
-        padding: 5px 60px 5px 15px;
-        margin: 0;
+        display: none;
     }
 
     #icones {
@@ -311,25 +351,35 @@ a {
     #curtido {
         font-size: 50px;
     }
+    .menu{
+        display: none;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #a{
+        display: none;
+    }
+    .p-a{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
 }
 
 
 @media (max-width: 767px) {
-    header {
-        padding: 10px;
-    }
-
-    #parte1 {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
 
     #pesquisar {
-        display: block;
-        padding: 5px 40px 5px 15px;
-        margin: 0;
-        width: 90%;
+        display: none;
     }
 
     #icones {
@@ -338,17 +388,11 @@ a {
     }
 
     #parte2 {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-        height: auto;
+        justify-content: start;
     }
 
-    #menutenis {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .menu {
+        display: none;
     }
 
     #block {
@@ -376,5 +420,28 @@ a {
         width: 90%;
         height: 45px;
         font-size: 16px;
+        color: var(--cor-menu-nav-texto);
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #a{
+        display: none;
+    }
+    .p-a{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
+    #pesquisar{
+        display: none;
     }
 }

@@ -71,6 +71,7 @@ header{
     gap: 50px;
     padding-right: 20px;
     background-color: var(--cor-da-parte2);
+    overflow-x: hidden;
 }
 #ajuda{
     color: var(--cor-das-linhas);
@@ -121,7 +122,7 @@ header{
 .botaotype:hover{
     background-color: rgb(217,217,217);
 }
-nav{
+.sidebarnormal{
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
@@ -199,8 +200,49 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.sidebar-icon{
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: none;
+    padding-right: 20px;
+    border-right: 2px solid #000;
+}
+.sidebar{
+    padding-top: 50px;
+    height: 1000vh;
+    width: 0; /* começa fechado */
+    position: fixed;
+    top: 0; /*mudei isso*/
+    left: 0; /* se quiser do lado direito, troque para right: 0 */
+    z-index: 1000;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    gap: 10px;
+    overflow-x: hidden; /* esconde o conteúdo quando fechado */
+    transition: width 0.3s ease; /* animação suave */
+    display: flex;
+    margin: 0;
+}
+.sidebar.open{
+    width: 200px;/* e mudei isso (tava 250)*/
+}
+.sidebar a{
+    cursor: pointer;
+    padding: 10px 0px 10px 30px;
+    border-radius: 15px;
+}
+.sidebar a:hover{
+    margin: 10px;
+    background-color: #CDCDCD;
+}
+
 @media (min-width: 1024px){
-    botao{
+    .botao{
         width: 40%;
     }
     #form p{
@@ -234,7 +276,32 @@ a {
     #corpo{
         display: flex;
         justify-content: center;
-        height: 50vh;
+        height: 80vh;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #parte2{
+        justify-content: start;
+    }
+    #acesibili{
+        display: none;
+    }
+    #ajuda{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
+    #pesquisar{
+        display: none;
     }
 }
 @media (max-width: 600px){
@@ -254,7 +321,7 @@ a {
         display: flex;
         justify-content: center;
         width: 70%;
-        height: 80vh;
+        height: 100vh;
     }
     #pesquisar{
         display: none;
@@ -280,6 +347,28 @@ a {
         display: flex;
         justify-content: center;
         gap: 30px;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #parte2{
+        justify-content: start;
+    }
+    #acesibili{
+        display: none;
+    }
+    #ajuda{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
     }
 
 }
