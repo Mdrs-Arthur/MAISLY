@@ -155,7 +155,7 @@ input::placeholder {
     background-color: var(--cor-hover-icones);
 }
  
-#menutenis {
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -323,6 +323,49 @@ input::placeholder {
       text-decoration: none;
       color: black;
   }
+
+/* sidebar */
+
+.sidebar-icon{
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: none;
+    padding-right: 20px;
+    border-right: 2px solid #000;
+}
+.sidebar{
+    padding-top: 50px;
+    height: 1000vh;
+    width: 0; /* começa fechado */
+    position: fixed;
+    top: 0; /*mudei isso*/
+    left: 0; /* se quiser do lado direito, troque para right: 0 */
+    z-index: 1000;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    gap: 10px;
+    overflow-x: hidden; /* esconde o conteúdo quando fechado */
+    transition: width 0.3s ease; /* animação suave */
+    display: flex;
+    margin: 0;
+}
+.sidebar.open{
+    width: 200px;/* e mudei isso (tava 250)*/
+}
+.sidebar a{
+    cursor: pointer;
+    padding: 10px 0px 10px 30px;
+    border-radius: 15px;
+}
+.sidebar a:hover{
+    margin: 10px;
+    background-color: #CDCDCD;
+}
+
 @media (min-width: 1024px){
     #confirmacao{
         display: flex;
@@ -343,11 +386,39 @@ input::placeholder {
         height: 50vh;
         width: 90%;
     }
+    .menu{
+      display: none;
+    }
     nav{
         gap: 30px;
         flex-wrap: wrap;
         padding: 5px;
         padding-top: 0;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #parte2{
+        justify-content: start;
+    }
+    #a{
+        display: none;
+    }
+    .p-a{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
+    #pesquisar{
+        display: none;
     }
 }
 @media (max-width: 600px){
@@ -359,8 +430,8 @@ input::placeholder {
         width: 70%;
         height: 85vh;
     }
-    #pesquisar{
-        display: none;
+    .menu{
+      display: none;
     }
     nav{
         gap: 30px;
@@ -428,5 +499,30 @@ input::placeholder {
     #fazer-pedido {
         width: 60%;
         padding: 10px 15px;
+    }
+    .sidebar-icon{
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #parte2{
+        justify-content: start;
+    }
+    #acesibili{
+        display: none;
+    }
+    #ajuda{
+        display: none;
+    }
+    .p{
+        border: none;
+        padding-left: 0px;
+        cursor: pointer;
+    }
+    .sidebarnormal{
+        display: none;
+    }
+    #pesquisar{
+        display: none;
     }
   }
